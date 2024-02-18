@@ -6,8 +6,8 @@ services:
     image: postgres:15
     container_name: sl-db
     environment:
-      POSTGRES_PASSWORD: sql-ledger
-      POSTGRES_USER: sql-ledger
+      POSTGRES_PASSWORD: sladmin
+      POSTGRES_USER: _slAdmin1
     volumes:
       - sldb:/var/lib/postgresql/data
 
@@ -16,7 +16,7 @@ services:
     container_name: sl-pgadmin
     environment:
       # change these settings or add a new user after the first login:
-      PGADMIN_DEFAULT_EMAIL: user@domain.com
+      PGADMIN_DEFAULT_EMAIL: gma@casakondo.com
       PGADMIN_DEFAULT_PASSWORD: SuperSecret
     ports:
       - 8085:80
@@ -28,7 +28,7 @@ services:
     container_name: sl-app
     environment:
       SL_HELPFUL_LOGIN: 1
-      SL_LOGIN_LANGUAGE: chd_utf
+      SL_LOGIN_LANGUAGE: fr_utf
     init: true
     ports:
       - 8080:80
