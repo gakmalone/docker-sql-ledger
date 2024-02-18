@@ -5,7 +5,7 @@ docker:
   image: Tekki/sql-ledger
 
 git:
-  repo: https://github.com/gakmalone/docker-sql-ledger
+  repo: https://github.com/Tekki/docker-sql-ledger
 
 global:
   bin: /var/www/sql-ledger
@@ -15,6 +15,7 @@ global:
     - spool
     - templates
     - users
+    - sql
   description: '[SQL-Ledger](https://sql-ledger.com) is an open source ERP and accounting system.'
   license: Artistic-2.0
   group: www-data
