@@ -9,7 +9,7 @@ EXPOSE 80
 VOLUME /var/sldata
 WORKDIR /var/www/sql-ledger
 
-ENV TEXLIVE_LANG german
+ENV TEXLIVE_LANG french
 
 RUN set -ex \
   && apt-get update && apt-get install -y --no-install-recommends \
@@ -61,7 +61,7 @@ RUN set -ex \
 ENV SL_DVIPDF 0
 ENV SL_HELPFUL_LOGIN 0
 ENV SL_LATEX 1
-ENV SL_LOGIN_LANGUAGE=
+ENV SL_LOGIN_LANGUAGE=fr_utf
 ENV SL_PDFTK 1
 ENV SL_SENDMAIL="| /usr/sbin/sendmail -f <%from%> -t"
 ENV SL_XELATEX 1
