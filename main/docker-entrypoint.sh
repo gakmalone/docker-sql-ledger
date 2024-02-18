@@ -7,7 +7,7 @@
 
 envsubst '${SL_DVIPDF},${SL_HELPFUL_LOGIN},${SL_LATEX},${SL_LOGIN_LANGUAGE},${SL_PDFTK},${SL_SENDMAIL},${SL_XELATEX}' < /usr/src/sql-ledger.conf > sql-ledger.conf
 
-FOLDERS="images spool templates users"
+FOLDERS="images spool templates users sql"
 for FOLDER in $FOLDERS; do
     if [ ! -f /var/sldata/$FOLDER ]; then
         cp -r $FOLDER /var/sldata/
